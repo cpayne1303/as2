@@ -92,6 +92,10 @@ function myLoadFunction() {
 	document.addEventListener('keydown', keydown);
 	document.addEventListener('keyup', keyup);
 }
+function startGame()
+{
+	var startDiv=document.querySelector('.start');
+	startDiv.addEventListener('DOMContentLoaded', myLoadFunction);
+}
 
-
-document.addEventListener('DOMContentLoaded', myLoadFunction);
+document.addEventListener('DOMContentLoaded', startGame);
