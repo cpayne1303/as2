@@ -95,7 +95,7 @@ function myLoadFunction() {
 function startGame()
 {
 	var startDiv=document.querySelector('.start');
-	startDiv.addEventListener('DOMContentLoaded', myLoadFunction);
+	startDiv.addEventListener('click', myLoadFunction);
 }
 
 document.addEventListener('DOMContentLoaded', startGame);
