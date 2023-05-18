@@ -88,6 +88,8 @@ function keydown(event) {
 
 
 function myLoadFunction() {
+	var startDiv=document.querySelector('.start');
+startDiv.style.display='none';
 	timeout = setInterval(move, 10);
 	document.addEventListener('keydown', keydown);
 	document.addEventListener('keyup', keyup);
