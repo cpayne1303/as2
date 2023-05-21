@@ -33,9 +33,11 @@ function move() {
 	var positionTop = player.offsetTop;
 	if (downPressed) {
 		var newTop = positionTop + 1;
-
+var maybeCactus=document.elementFromPoint(positionLeft, newTop+46);
+		if(!maybeCactus.classList.contains("cactus"))
+		{
 		player.style.top = newTop + 'px';
-
+		}
 		if (leftPressed == false) {
 			if (rightPressed == false) {
 				player.className = 'character walk down';
@@ -44,8 +46,11 @@ function move() {
 	}
 	if (upPressed) {
 		var newTop = positionTop - 1;
-
+var maybeCactus=document.elementFromPoint(positionLeft, newTop);
+		if(!maybeCactus.classList.contains("cactus"))
+		{
 		player.style.top = newTop + 'px';
+		}
 
 		if (leftPressed == false) {
 			if (rightPressed == false) {
@@ -55,15 +60,21 @@ function move() {
 	}
 	if (leftPressed) {
 		var newLeft = positionLeft - 1;
-
+var maybeCactus=document.elementFromPoint(newLeft, positionTop);
+		if(!maybeCactus.classList.contains("cactus"))
+{
 		player.style.left = newLeft + 'px';
+}
 
 		player.className = 'character walk left';
 	}
 	if (rightPressed) {
 		var newLeft = positionLeft + 1;
-
+var maybeCactus=document.elementFromPoint(newLeft+32, positionTop);
+		if(!maybeCactus.classList.contains("cactus"))
+{
 		player.style.left = newLeft + 'px';
+}
 
 		player.className = 'character walk right';
 	}
